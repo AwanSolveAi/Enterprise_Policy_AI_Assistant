@@ -1,0 +1,49 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment / secrets
+.env
+.env.*
+*.key
+*.pem
+*.pfx
+.streamlit/secrets.toml
+
+# Local models
+data/models/
+*.gguf
+
+# Local LLM runtimes
+tools/llama.cpp/
+
+# Logs / temporary
+*.log
+logs/
+tmp/
+temp/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Archives / backups
+*.zip
+*.7z
+*.rar
+*.bak
+*.old
+
+# Evaluation outputs not needed by runtime
+evaluation/results_*.json

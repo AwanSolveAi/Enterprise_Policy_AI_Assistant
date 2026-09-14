@@ -1,0 +1,1795 @@
+{
+  "schema_version": "1.0",
+  "project": "Enterprise Policy AI",
+  "suite": "golden",
+  "description": "Golden QA set for retrieval, grounding, citation, abstention, jurisdiction, and answer-quality release testing.",
+  "production_architecture_frozen": true,
+  "generated_from": "F:\\enterprise_policy_ai\\evaluation\\answer_benchmark.json",
+  "case_count": 75,
+  "answerable_cases": 66,
+  "unanswerable_cases": 9,
+  "critical_cases": 57,
+  "distribution": {
+    "group": {
+      "benefits": 6,
+      "country_specific": 14,
+      "leave_time_off": 7,
+      "multi_part_ambiguous": 3,
+      "offboarding": 11,
+      "remote_work": 8,
+      "straightforward": 8,
+      "unanswerable": 9,
+      "workplace_conduct": 9
+    },
+    "difficulty": {
+      "adversarial": 61,
+      "difficult": 7,
+      "easy": 4,
+      "normal": 3
+    },
+    "jurisdiction": {
+      "Australia": 10,
+      "France": 5,
+      "India": 3,
+      "Ireland": 4,
+      "United States": 11,
+      "unspecified": 42
+    }
+  },
+  "release_policy": {
+    "unsupported_confident_answers": 0,
+    "unsupported_critical_answers": 0,
+    "wrong_jurisdiction_universalizations": 0,
+    "consequence_transfer_failures": 0,
+    "critical_cross_document_contamination": 0,
+    "known_regression_tests_required_pass_rate": 1.0
+  },
+  "cases": [
+    {
+      "id": "usa_personnel_file",
+      "question": "How can a current or former US team member request their personnel file?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "personnel file",
+        "dpo@gitlab.com"
+      ],
+      "expected_critical_facts": [
+        "personnel file",
+        "dpo@gitlab.com"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "usa_accommodation",
+      "question": "Where should a US employee request a reasonable workplace accommodation?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "expected_critical_facts": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "usa_pay_discussion",
+      "question": "May US employees discuss their own pay with coworkers?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "expected_critical_facts": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "harassment_report",
+      "question": "What should a team member do if harassment continues or they do not want to confront the harasser?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "report the misconduct",
+        "People Business Partner"
+      ],
+      "expected_critical_facts": [
+        "report the misconduct",
+        "People Business Partner"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "harassment_investigation",
+      "question": "What happens after harassment is reported?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "impartial investigation",
+        "reported"
+      ],
+      "expected_critical_facts": [
+        "impartial investigation",
+        "reported"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "harassment_scope",
+      "question": "Does GitLab's anti-harassment policy apply to contractors and employees globally?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "expected_critical_facts": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "india_complaint_body",
+      "question": "Which body handles sexual-harassment complaints for GitLab India?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0012",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": "India",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Internal Committee",
+        "complaint"
+      ],
+      "expected_critical_facts": [
+        "Internal Committee",
+        "complaint"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "offboarding_plain",
+      "question": "What happens when an employee leaves GitLab?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "expected_critical_facts": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "offboarding_resignation",
+      "question": "How does a team member submit a resignation?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "easy",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "resignation through Workday",
+        "Letter of Resignation"
+      ],
+      "expected_critical_facts": [
+        "resignation through Workday",
+        "Letter of Resignation"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "offboarding_involuntary",
+      "question": "Who facilitates an involuntary termination at GitLab?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "easy",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Team Member Relations",
+        "involuntary terminations"
+      ],
+      "expected_critical_facts": [
+        "Team Member Relations",
+        "involuntary terminations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "offboarding_benefits",
+      "question": "When can benefits end after a team member leaves?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "benefits will cease",
+        "last day"
+      ],
+      "expected_critical_facts": [
+        "benefits will cease",
+        "last day"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "offboarding_communication",
+      "question": "When someone departs, who communicates it and what may be shared for an involuntary departure?",
+      "answerable": true,
+      "group": "multi_part_ambiguous",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "managers communicate",
+        "privacy"
+      ],
+      "expected_critical_facts": [
+        "managers communicate",
+        "privacy"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "timeoff_sick",
+      "question": "How should a team member record sick time?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Sick Time",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Sick Time",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "timeoff_bereavement",
+      "question": "What does the policy say about bereavement leave?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "easy",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Bereavement",
+        "time off"
+      ],
+      "expected_critical_facts": [
+        "Bereavement",
+        "time off"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "timeoff_parental",
+      "question": "How should an Australian team member initiate parental leave?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "leave_absence_purpose",
+      "question": "What situations are GitLab's company-wide leaves of absence intended to cover?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "easy",
+      "expected_document_id": "hr_policy_0007",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "serious health condition",
+        "family member"
+      ],
+      "expected_critical_facts": [
+        "serious health condition",
+        "family member"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "timeoff_jury",
+      "question": "Is jury duty covered, and where should an employee find the applicable process?",
+      "answerable": true,
+      "group": "multi_part_ambiguous",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Jury Duty",
+        "time off"
+      ],
+      "expected_critical_facts": [
+        "Jury Duty",
+        "time off"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "benefit_growth_fund",
+      "question": "What is the Growth and Development Fund for?",
+      "answerable": true,
+      "group": "benefits",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0006",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Growth and Development Fund",
+        "professional growth"
+      ],
+      "expected_critical_facts": [
+        "Growth and Development Fund",
+        "professional growth"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "australia_health",
+      "question": "Which provider supplies private health insurance for Australian employees?",
+      "answerable": true,
+      "group": "benefits",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "expected_critical_facts": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "australia_super",
+      "question": "What retirement benefit applies to GitLab team members in Australia?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "superannuation",
+        "Australian"
+      ],
+      "expected_critical_facts": [
+        "superannuation",
+        "Australian"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "france_disconnect",
+      "question": "What is the right to disconnect for GitLab France employees?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0009",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "France",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "ireland_disconnect",
+      "question": "Who should an Ireland employee contact about a right-to-disconnect concern?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0010",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "Ireland",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "manager"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "manager"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "france_remote_equipment",
+      "question": "What happens to remote-work equipment when employment ends in France?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0008",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "France",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "return",
+        "equipment"
+      ],
+      "expected_critical_facts": [
+        "return",
+        "equipment"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "family_hiring",
+      "question": "What is GitLab's policy regarding hiring family members?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": true,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "salary_exact",
+      "question": "What exact salary does GitLab pay a senior software engineer in Pakistan?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "meal_reimbursement",
+      "question": "What is the daily meal reimbursement limit for employees visiting Tokyo?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "dress_code",
+      "question": "What color suit must employees wear in a GitLab office?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "stock_forecast",
+      "question": "How much will GitLab stock rise next year?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": null,
+      "notes": ""
+    },
+    {
+      "id": "usa_personnel_file__golden_variant_1_001",
+      "question": "How can a current or former US employee request their personnel file?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "personnel file",
+        "dpo@gitlab.com"
+      ],
+      "expected_critical_facts": [
+        "personnel file",
+        "dpo@gitlab.com"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_personnel_file",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_personnel_file__golden_variant_2_002",
+      "question": "How can a current or former U.S. team member request their personnel file?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "personnel file",
+        "dpo@gitlab.com"
+      ],
+      "expected_critical_facts": [
+        "personnel file",
+        "dpo@gitlab.com"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_personnel_file",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_accommodation__golden_variant_1_003",
+      "question": "Where should a US team member request a reasonable workplace accommodation?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "expected_critical_facts": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_accommodation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_accommodation__golden_variant_2_004",
+      "question": "Where should a U.S. employee request a reasonable workplace accommodation?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "expected_critical_facts": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_accommodation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_accommodation__golden_variant_3_005",
+      "question": "Which channel or process should a US employee request a reasonable workplace accommodation?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "expected_critical_facts": [
+        "reasonable accommodation",
+        "HelpLab"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_accommodation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_pay_discussion__golden_variant_1_006",
+      "question": "May US team members discuss their own pay with coworkers?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "expected_critical_facts": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_pay_discussion",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_pay_discussion__golden_variant_2_007",
+      "question": "May U.S. employees discuss their own pay with coworkers?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "expected_critical_facts": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_pay_discussion",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "usa_pay_discussion__golden_variant_3_008",
+      "question": "Are US employees discuss their own pay with coworkers allowed?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0001",
+      "expected_category": "People Policies",
+      "expected_jurisdiction": "United States",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "expected_critical_facts": [
+        "discuss their own pay",
+        "team members"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "usa_pay_discussion",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_report__golden_variant_1_009",
+      "question": "What should a employee do if harassment continues or they do not want to confront the harasser?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "report the misconduct",
+        "People Business Partner"
+      ],
+      "expected_critical_facts": [
+        "report the misconduct",
+        "People Business Partner"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_report",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_report__golden_variant_2_010",
+      "question": "What should a team member do if harassing conduct continues or they do not want to confront the harasser?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "report the misconduct",
+        "People Business Partner"
+      ],
+      "expected_critical_facts": [
+        "report the misconduct",
+        "People Business Partner"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_report",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_investigation__golden_variant_1_011",
+      "question": "What happens after harassing conduct is reported?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "impartial investigation",
+        "reported"
+      ],
+      "expected_critical_facts": [
+        "impartial investigation",
+        "reported"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_investigation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_investigation__golden_variant_2_012",
+      "question": "What process follows after harassment is reported?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "impartial investigation",
+        "reported"
+      ],
+      "expected_critical_facts": [
+        "impartial investigation",
+        "reported"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_investigation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_scope__golden_variant_1_013",
+      "question": "Does GitLab's anti-harassment policy apply to contractors and team members globally?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "expected_critical_facts": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_scope",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_scope__golden_variant_2_014",
+      "question": "Does GitLab's anti-harassing conduct policy apply to contractors and employees globally?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "expected_critical_facts": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_scope",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "harassment_scope__golden_variant_3_015",
+      "question": "Is it correct that GitLab's anti-harassment policy apply to contractors and employees globally?",
+      "answerable": true,
+      "group": "straightforward",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0002",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "expected_critical_facts": [
+        "contractor or employee",
+        "all locations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "harassment_scope",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "india_complaint_body__golden_variant_1_016",
+      "question": "Which body handles sexual-harassing conduct complaints for GitLab India?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0012",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": "India",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Internal Committee",
+        "complaint"
+      ],
+      "expected_critical_facts": [
+        "Internal Committee",
+        "complaint"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "india_complaint_body",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "india_complaint_body__golden_variant_2_017",
+      "question": "What body handles sexual-harassment complaints for GitLab India?",
+      "answerable": true,
+      "group": "workplace_conduct",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0012",
+      "expected_category": "Workplace Conduct",
+      "expected_jurisdiction": "India",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Internal Committee",
+        "complaint"
+      ],
+      "expected_critical_facts": [
+        "Internal Committee",
+        "complaint"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "india_complaint_body",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_plain__golden_variant_1_018",
+      "question": "What happens when an team member leaves GitLab?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "expected_critical_facts": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "offboarding_plain",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_plain__golden_variant_2_019",
+      "question": "What happens when an employee departs GitLab?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "expected_critical_facts": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "offboarding_plain",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_plain__golden_variant_3_020",
+      "question": "What occurs when an employee leaves GitLab?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "expected_critical_facts": [
+        "offboarding process",
+        "People Operations"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "offboarding_plain",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_resignation__golden_variant_1_021",
+      "question": "How does a employee submit a resignation?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "normal",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "resignation through Workday",
+        "Letter of Resignation"
+      ],
+      "expected_critical_facts": [
+        "resignation through Workday",
+        "Letter of Resignation"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": "offboarding_resignation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_resignation__golden_variant_2_022",
+      "question": "How does a team member submit a notice of resignation?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "normal",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "resignation through Workday",
+        "Letter of Resignation"
+      ],
+      "expected_critical_facts": [
+        "resignation through Workday",
+        "Letter of Resignation"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": "offboarding_resignation",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_benefits__golden_variant_1_023",
+      "question": "When can benefits end after a employee leaves?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "benefits will cease",
+        "last day"
+      ],
+      "expected_critical_facts": [
+        "benefits will cease",
+        "last day"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "offboarding_benefits",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "offboarding_benefits__golden_variant_2_024",
+      "question": "When can benefits end after a team member departs?",
+      "answerable": true,
+      "group": "offboarding",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0003",
+      "expected_category": "Offboarding",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "benefits will cease",
+        "last day"
+      ],
+      "expected_critical_facts": [
+        "benefits will cease",
+        "last day"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "offboarding_benefits",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_sick__golden_variant_1_025",
+      "question": "How should a employee record sick time?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Sick Time",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Sick Time",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "timeoff_sick",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_sick__golden_variant_2_026",
+      "question": "How should a team member enter sick time?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Sick Time",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Sick Time",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "timeoff_sick",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_sick__golden_variant_3_027",
+      "question": "What is the correct way for a team member record sick time?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Sick Time",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Sick Time",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "timeoff_sick",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_parental__golden_variant_1_028",
+      "question": "How should an Australian employee initiate parental leave?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "timeoff_parental",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_parental__golden_variant_2_029",
+      "question": "How should an Australia-based team member initiate parental leave?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "timeoff_parental",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_parental__golden_variant_3_030",
+      "question": "What is the correct way for an Australian team member initiate parental leave?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "expected_critical_facts": [
+        "Parental Leave",
+        "Workday"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "timeoff_parental",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "leave_absence_purpose__golden_variant_1_031",
+      "question": "What situations are GitLab's company-wide departs of absence intended to cover?",
+      "answerable": true,
+      "group": "leave_time_off",
+      "difficulty": "normal",
+      "expected_document_id": "hr_policy_0007",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "serious health condition",
+        "family member"
+      ],
+      "expected_critical_facts": [
+        "serious health condition",
+        "family member"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": "leave_absence_purpose",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "timeoff_jury__golden_variant_1_032",
+      "question": "Is jury duty covered, and where should an team member find the applicable process?",
+      "answerable": true,
+      "group": "multi_part_ambiguous",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0004",
+      "expected_category": "Leave & Time Off",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Jury Duty",
+        "time off"
+      ],
+      "expected_critical_facts": [
+        "Jury Duty",
+        "time off"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": "timeoff_jury",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "benefit_growth_fund__golden_variant_1_033",
+      "question": "Can you explain the Growth and Development Fund for?",
+      "answerable": true,
+      "group": "benefits",
+      "difficulty": "difficult",
+      "expected_document_id": "hr_policy_0006",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "Growth and Development Fund",
+        "professional growth"
+      ],
+      "expected_critical_facts": [
+        "Growth and Development Fund",
+        "professional growth"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": false,
+      "variant_of": "benefit_growth_fund",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "australia_health__golden_variant_1_034",
+      "question": "Which provider supplies private health insurance for Australian team members?",
+      "answerable": true,
+      "group": "benefits",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "expected_critical_facts": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "australia_health",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "australia_health__golden_variant_2_035",
+      "question": "Which provider supplies private health insurance for Australia-based employees?",
+      "answerable": true,
+      "group": "benefits",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "expected_critical_facts": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "australia_health",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "australia_health__golden_variant_3_036",
+      "question": "What provider supplies private health insurance for Australian employees?",
+      "answerable": true,
+      "group": "benefits",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "expected_critical_facts": [
+        "BUPA",
+        "private health insurance"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "australia_health",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "australia_super__golden_variant_1_037",
+      "question": "What retirement benefit applies to GitLab employees in Australia?",
+      "answerable": true,
+      "group": "country_specific",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0011",
+      "expected_category": "Benefits",
+      "expected_jurisdiction": "Australia",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "superannuation",
+        "Australian"
+      ],
+      "expected_critical_facts": [
+        "superannuation",
+        "Australian"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "australia_super",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "france_disconnect__golden_variant_1_038",
+      "question": "What is the right to disconnect for GitLab France team members?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0009",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "France",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "france_disconnect",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "france_disconnect__golden_variant_2_039",
+      "question": "What is the right to disconnect for GitLab employees in France?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0009",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "France",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "france_disconnect",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "france_disconnect__golden_variant_3_040",
+      "question": "Can you explain the right to disconnect for GitLab France employees?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0009",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "France",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "working hours"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "france_disconnect",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "ireland_disconnect__golden_variant_1_041",
+      "question": "Who should an Ireland team member contact about a right-to-disconnect concern?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0010",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "Ireland",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "manager"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "manager"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "ireland_disconnect",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "ireland_disconnect__golden_variant_2_042",
+      "question": "Who should an employee in Ireland contact about a right-to-disconnect concern?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0010",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "Ireland",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "manager"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "manager"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "ireland_disconnect",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "ireland_disconnect__golden_variant_3_043",
+      "question": "Which person or team should an Ireland employee contact about a right-to-disconnect concern?",
+      "answerable": true,
+      "group": "remote_work",
+      "difficulty": "adversarial",
+      "expected_document_id": "hr_policy_0010",
+      "expected_category": "Remote Work",
+      "expected_jurisdiction": "Ireland",
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [
+        "right to disconnect",
+        "manager"
+      ],
+      "expected_critical_facts": [
+        "right to disconnect",
+        "manager"
+      ],
+      "forbidden_claims": [],
+      "expected_abstention": false,
+      "critical_case": true,
+      "variant_of": "ireland_disconnect",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "family_hiring__golden_variant_1_044",
+      "question": "Can you explain GitLab's policy regarding hiring family members?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": true,
+      "variant_of": "family_hiring",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "meal_reimbursement__golden_variant_1_045",
+      "question": "What is the daily meal reimbursement limit for team members visiting Tokyo?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": "meal_reimbursement",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "meal_reimbursement__golden_variant_2_046",
+      "question": "Can you explain the daily meal reimbursement limit for employees visiting Tokyo?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": "meal_reimbursement",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    },
+    {
+      "id": "dress_code__golden_variant_1_047",
+      "question": "What color suit must team members wear in a GitLab office?",
+      "answerable": false,
+      "group": "unanswerable",
+      "difficulty": "adversarial",
+      "expected_document_id": null,
+      "expected_category": null,
+      "expected_jurisdiction": null,
+      "expected_evidence_chunk_ids": [],
+      "expected_evidence_terms": [],
+      "expected_critical_facts": [],
+      "forbidden_claims": [],
+      "expected_abstention": true,
+      "critical_case": false,
+      "variant_of": "dress_code",
+      "notes": "Automatically generated wording variant. Expected policy facts and evidence are inherited unchanged from the validated source case."
+    }
+  ]
+}

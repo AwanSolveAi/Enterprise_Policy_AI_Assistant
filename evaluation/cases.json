@@ -1,0 +1,25 @@
+[
+  {
+    "id": "offboarding_plain_language",
+    "query": "What happens when an employee leaves GitLab?",
+    "expected_chunk_ids": [],
+    "expected_document_id": "hr_policy_0003",
+    "expected_category": "Offboarding",
+    "k": 5
+  },
+  {
+    "id": "family_hiring_corpus_gap",
+    "query": "What is GitLab's policy regarding hiring family members?",
+    "expected_chunk_ids": [],
+    "expected_abstention": true,
+    "k": 5
+  },
+  {
+    "id": "harassment_reporting",
+    "query": "What should an employee do if they experience harassment?",
+    "expected_chunk_ids": ["hr_policy_0002_chunk_0007"],
+    "expected_document_id": "hr_policy_0002",
+    "expected_category": "Workplace Conduct",
+    "k": 5
+  }
+]
