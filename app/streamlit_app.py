@@ -1,4 +1,4 @@
-"""Client-demo interface for TechSolAi Enterprise Policy AI."""
+"""Client-demo interface for AwanSolveAi Enterprise Policy AI."""
 from __future__ import annotations
 
 import sys
@@ -18,7 +18,7 @@ from src.generation.rag_engine import INSUFFICIENT
 
 
 st.set_page_config(
-    page_title="Enterprise Policy AI | TechSolAi",
+    page_title="Enterprise Policy AI | AwanSolveAi",
     page_icon="📘",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -75,7 +75,7 @@ def choose_example(question: str) -> None:
 
 with st.sidebar:
     st.markdown(
-        '<div class="side-brand">TechSolAi</div>',
+        '<div class="side-brand">AwanSolveAi</div>',
         unsafe_allow_html=True,
     )
     st.markdown(
@@ -101,7 +101,7 @@ with st.sidebar:
 st.markdown(
     """
 <div class="hero">
-  <div class="eyebrow">TechSolAi</div>
+  <div class="eyebrow">AwanSolveAi</div>
   <h1>Enterprise Policy AI</h1>
   <p>AI-Powered HR Policy &amp; Employee Knowledge Assistant</p>
   <div class="tagline">We Deal in Solutions.</div>
